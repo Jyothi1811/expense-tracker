@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Flashcards | Study App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <h1>📘 Flashcards</h1>
+        <div class="actions">
+          <button id="toggle-theme" title="Toggle theme">🌙</button>
+          <button id="shuffle" title="Shuffle cards">🎲</button>
+          <label class="import-label">
+            📥 Import
+            <input type="file" id="import-json" accept=".json" />
+          </label>
+          <button id="export" title="Export flashcards">📤 Export</button>
+        </div>
+        <input type="text" id="search" placeholder="🔍 Search flashcards..." />
+      </header>
+
+      <main id="card-container" class="card-container"></main>
+
+      <footer class="footer">
+        <button id="add-card">➕ Add Flashcard</button>
+      </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-box">
+        <h2>Add / Edit Flashcard</h2>
+        <input type="text" id="question" placeholder="Enter question..." />
+        <input type="text" id="answer" placeholder="Enter answer..." />
+        <div class="modal-actions">
+          <button id="save-card">💾 Save</button>
+          <button id="cancel">❌ Cancel</bautton>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
